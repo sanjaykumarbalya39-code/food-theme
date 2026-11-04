@@ -1,0 +1,49 @@
+/* One motion language, shared by every page. */
+:root{--ease-elegant:cubic-bezier(.22,.68,.25,1);--ease-out:cubic-bezier(.16,1,.3,1)}
+@media(prefers-reduced-motion:no-preference){
+  .header>.brand,.header nav,.header .header-actions{animation:header-arrive .75s var(--ease-out) both}
+  .header nav{animation-delay:80ms}.header .header-actions{animation-delay:150ms}
+  .hero-content>*{animation:content-arrive .85s var(--ease-out) both}
+  .hero-content>.eyebrow{animation-delay:80ms}.hero-content>h1{animation-delay:160ms}.hero-content>p{animation-delay:240ms}.hero-content>.search{animation-delay:320ms}.hero-content>.hero-shortcuts,.hero-content>.popular-searches,.hero-content>a{animation-delay:390ms}
+  .header nav a{transition:color .25s ease}
+  .header nav a:after{transform-origin:left center;transition:transform .4s var(--ease-out),background .25s ease}
+  .header>.brand .brand-logo{transition:translate .45s var(--ease-out)}
+  .header>.brand:hover .brand-logo{translate:0 -2px}
+  .header .header-actions button,.header .header-actions a.login,.header-actions>.header-select:not(.location-control){transition:background .25s ease,box-shadow .3s ease,transform .3s var(--ease-out),border-color .25s ease}
+  .header .header-actions a.login:hover,.header .header-actions button:hover{box-shadow:0 5px 14px #27382810;border-color:#cfc6b6}
+  .header .location-control svg{transition:translate .35s var(--ease-out)}
+  .header .location-control:hover svg{translate:0 -3px}
+  .header-actions>.header-select:not(.location-control):focus-within{box-shadow:0 0 0 3px #a7655412;border-color:#bca38d}
+  .reveal{transition-timing-function:var(--ease-elegant);transition-duration:.8s}
+  .motion-reveal{opacity:0;translate:0 16px;transition:opacity .65s var(--ease-elegant) var(--entrance-delay,0ms),translate .65s var(--ease-elegant) var(--entrance-delay,0ms),transform .4s var(--ease-out),box-shadow .4s ease}
+  .motion-reveal.motion-visible{opacity:1;translate:0 0}
+  .venue-card,.menu-dish{animation:none}
+  .review{transition:translate .65s var(--ease-elegant) var(--entrance-delay,0ms),opacity .65s var(--ease-elegant) var(--entrance-delay,0ms),box-shadow .35s ease}
+  .search,.subscribe{transition:box-shadow .35s ease}
+  .search:focus-within,.subscribe:focus-within{box-shadow:0 0 0 4px #c6aa7c33,0 12px 35px #17251b18}
+  .solid-link,.account-submit,.outline-link,.subscribe button,.offer{transition:background .25s ease,box-shadow .3s ease,transform .3s var(--ease-out)}
+  .solid-link:hover,.account-submit:hover{box-shadow:0 7px 18px #763d2520}
+  button:active:not(:disabled),a.solid-link:active,.account-submit:active{translate:0 1px}
+  .faq-list summary:after{transition:rotate .25s var(--ease-out),color .25s ease}
+  .faq-list details[open] summary:after{rotate:180deg}
+  .faq-list summary{transition:color .25s ease}.faq-list summary:hover{color:#a75e48}
+  dialog[open]{animation:dialog-arrive .3s var(--ease-out) both}
+  dialog[open]::backdrop{animation:backdrop-arrive .25s ease both}
+  .footer-links a,.footer-links button{transition:color .25s ease,translate .3s var(--ease-out)}
+  .footer-links a:hover,.footer-links button:hover{translate:3px 0;color:#f5ddba}
+  .save-place{transition:background .25s ease,color .25s ease,transform .3s var(--ease-out)}
+  .save-place.is-saved{animation:heart-settle .35s var(--ease-out)}
+}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .review:hover{box-shadow:0 10px 25px #263a2810}
+}
+@keyframes header-arrive{from{opacity:0;translate:0 -7px}to{opacity:1;translate:0 0}}
+@keyframes content-arrive{from{opacity:0;translate:0 15px}to{opacity:1;translate:0 0}}
+@keyframes dialog-arrive{from{opacity:0;translate:0 12px;scale:.985}to{opacity:1;translate:0 0;scale:1}}
+@keyframes backdrop-arrive{from{opacity:0}to{opacity:1}}
+@keyframes heart-settle{0%{scale:.9}55%{scale:1.1}100%{scale:1}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .motion-reveal,.js-motion .reveal:not(.visible){opacity:1!important;translate:none!important;transform:none!important}
+}

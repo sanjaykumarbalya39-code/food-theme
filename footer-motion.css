@@ -1,0 +1,50 @@
+/* Warm, quiet movement for the forest-green footer. */
+footer{position:relative;isolation:isolate}
+footer:before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,#c7b08780,transparent);pointer-events:none}
+.footer-links a,.footer-links button{position:relative;width:fit-content}
+.footer-links a:after,.footer-links button:after{content:'';position:absolute;left:0;bottom:-5px;height:1px;width:100%;background:linear-gradient(90deg,#d6b78c,#aab692);transform:scaleX(0);transform-origin:left center;pointer-events:none}
+.footer-links a:hover,.footer-links button:hover{text-decoration:none}
+.footer-links a:hover:after,.footer-links button:hover:after,
+.footer-links a:focus-visible:after,.footer-links button:focus-visible:after{transform:scaleX(1)}
+.socials a{position:relative;isolation:isolate}
+.socials a:before{content:'';position:absolute;inset:-5px;border:1px solid #cfb38b65;border-radius:50%;opacity:0;scale:.8;pointer-events:none}
+.socials a:hover,.socials a:focus-visible{color:#f7e2bd;background:#d7c39d21;box-shadow:0 6px 20px #111d1718}
+.footer-about>.brand{transition:opacity .3s ease}
+.footer-about>.brand:hover{opacity:.82}
+@media(prefers-reduced-motion:no-preference){
+  .footer-motion-ready .footer-entrance{opacity:0;translate:0 22px;transition:opacity .9s cubic-bezier(.22,.68,.25,1) var(--footer-delay,0ms),translate .9s cubic-bezier(.16,1,.3,1) var(--footer-delay,0ms)}
+  .footer-motion-ready.footer-in-view .footer-entrance{opacity:1;translate:0 0}
+  .footer-links a,.footer-links button{transition:translate .35s cubic-bezier(.22,1,.36,1),color .3s ease}
+  .footer-links a:after,.footer-links button:after{transition:transform .4s cubic-bezier(.22,1,.36,1)}
+  .footer-links a:hover,.footer-links button:hover{translate:4px 0}
+  .socials a{transition:transform .4s cubic-bezier(.22,1,.36,1),background .3s,color .3s,box-shadow .3s}
+  .socials a:before{transition:opacity .35s ease,scale .45s cubic-bezier(.22,1,.36,1)}
+  .socials a:hover,.socials a:focus-visible{transform:translateY(-5px)}
+  .socials a:hover:before,.socials a:focus-visible:before{opacity:1;scale:1}
+  .footer-in-view:before{animation:footer-edge-reveal 1.4s cubic-bezier(.16,1,.3,1) both}
+}
+@keyframes footer-edge-reveal{from{transform:scaleX(.15);opacity:0}to{transform:scaleX(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .footer-motion-ready .footer-entrance{opacity:1!important;translate:none!important}
+  .socials a:hover,.socials a:focus-visible{transform:none}
+}
+
+/* Full-width divider follows the social area; copyright sits below it. */
+footer{height:auto;min-height:420px}
+.footer-inner{padding-bottom:32px}
+.footer-divider{grid-column:1/-1;width:100%;height:1px;background:#d7c5a333;margin-top:30px}
+.footer-inner>.copyright{position:static;grid-column:1/-1;margin:20px 0 0;font-size:15px;line-height:1.6;color:#b8c1b6}
+@media(max-width:800px){footer{min-height:0}.footer-inner{padding-bottom:30px}.footer-divider{margin-top:28px}.footer-inner>.copyright{margin-top:18px;font-size:14px}}
+
+/* A warm ivory footer completes the site's light yellow-and-white palette. */
+footer{background:#e4efd9;color:#394331}
+footer:before{background:linear-gradient(90deg,transparent,#90a77899,transparent)}
+.footer-links h3{color:#465b3c}
+.footer-links a,.footer-links button{color:#4f5b43}
+.footer-about>p{color:#69735d}
+.footer-about>.brand .brand-logo{filter:brightness(0) saturate(100%) invert(27%) sepia(15%) saturate(1025%) hue-rotate(68deg) brightness(89%) contrast(90%)}
+.socials a{background:#f8faF3;color:#526b45;box-shadow:0 3px 12px #3c542a18}
+.socials a:hover,.socials a:focus-visible{color:#42623c;background:#dce9cf;box-shadow:0 6px 20px #3c542a20}
+.socials a:before{border-color:#90a77880}
+.footer-divider{background:#90a77866}
+.footer-inner>.copyright{color:#69735d}

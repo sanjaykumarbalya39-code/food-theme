@@ -1,0 +1,8 @@
+window.StacklyRestaurantData =[
+ {id:'sattva',name:'Cedar Courtyard',rating:4.3,cuisine:'South Indian / North Indian',area:'Sakleshpur, Bengaluru',price:1200,offer:20,image:'restaurant',tags:'Indian Family',note:'A relaxed setting for familiar flavours, shared plates, and a family catch-up.'},
+ {id:'espano',name:'Olive & Stone',rating:4.9,cuisine:'Chinese / Italian / Thai',area:'RR Nagar, Bengaluru',price:3200,offer:10,image:'dining',tags:'Italian Chinese Date night',note:'An evening-inspired setting for a leisurely dinner and a little culinary adventure.'},
+ {id:'grand-oka',name:'The Spice Arcade',rating:4.1,cuisine:'South Indian / North Indian',area:'BTM, Bengaluru',price:1200,offer:20,image:'indian',tags:'Indian Family',note:'Comforting Indian food inspiration for an easy lunch or an unhurried evening.'},
+ {id:'oiastra',name:'Saffron Verandah',rating:4.3,cuisine:'South Indian / North Indian',area:'Silk Institute, Bengaluru',price:1200,offer:20,image:'friends',tags:'Indian Family',note:'A place in our sample collection for larger gatherings and meals made for sharing.'},
+ {id:'garden',name:'Greenhouse Kitchen',rating:4.5,cuisine:'Healthy / Continental / Cafe',area:'Indiranagar, Bengaluru',price:1400,offer:10,image:'salad',tags:'Healthy Cafe',note:'A fresh, light dining concept with colourful plates and a slower afternoon in mind.'},
+ {id:'little-cup',name:'Cornerstone Cafe',rating:4.6,cuisine:'Cafe / Desserts / Italian',area:'Indiranagar, Bengaluru',price:900,offer:10,image:'cafe',tags:'Cafe Desserts Italian',note:'Coffee conversations, a sweet finish, and cosy corners for your next catch-up.'}
+];

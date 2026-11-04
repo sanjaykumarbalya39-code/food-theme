@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location preference - Stackly</title>
+  <meta name="description" content="Choose whether to allow location access for your Stackly experience.">
+  <link rel="icon" type="image/webp" href="assets/stackly-logo.webp">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="location-permission.css">
+  <script src="account-store.js?v=dashboard-sync2" defer></script><script src="location-permission.js?v=dashboard1" defer></script>
+</head>
+<body class="permission-page">
+  <main class="permission-main">
+    <a class="permission-brand" href="index.html" aria-label="Stackly home"><img src="assets/stackly-logo.webp" alt="STACKLY" width="180" height="94"></a>
+    <section class="permission-card" aria-labelledby="permission-title" aria-describedby="permission-description">
+      <div class="permission-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5.5-7 11-7 11S5 15.5 5 10a7 7 0 1 1 14 0Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></div>
+      <span class="eyebrow">A LITTLE CLOSER TO YOU</span>
+      <h1 id="permission-title">Make it local.</h1>
+      <p id="permission-description">Allow Stackly to access this device’s location for a more local experience?</p>
+      <p class="permission-note">Location is optional. Live nearby listings are not available in this preview; you can choose a city manually.</p>
+      <div class="permission-actions"><button id="allow-location" type="button">Allow location <span aria-hidden="true">↗</span></button><button id="deny-location" type="button">Deny</button></div>
+      <p class="permission-status" role="status" aria-live="polite"></p>
+      <a class="permission-continue" href="dashboard.html" hidden>Continue to your dashboard <span aria-hidden="true">↗</span></a>
+      <div class="permission-privacy"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="m10 2 6 3v5c0 4-6 7-6 7s-6-3-6-7V5l6-3Z" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="m7 9 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg><span>Your choice. Your control.</span></div>
+    </section>
+    <p class="permission-bottom">You can change device permissions later in your browser settings.</p>
+  </main>
+</body>
+</html>

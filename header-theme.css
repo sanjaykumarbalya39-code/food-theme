@@ -1,0 +1,60 @@
+/* Forest glass connects the navigation visually to the food photography. */
+.hero>.header{
+  background:linear-gradient(105deg,rgba(22,39,30,.97),rgba(35,49,35,.92));
+  color:#f4f0e5;
+  border-bottom:1px solid #d5c4a32b;
+  box-shadow:0 8px 28px #101d171c;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+.header>.brand .brand-logo{filter:brightness(0) invert(1)}
+.header nav a{color:#ececde}
+.header nav a.active,.header nav a:hover,.header nav a:focus-visible,
+.header nav.nav-has-motion a:hover,.header nav.nav-has-motion a:focus-visible{color:#dfc6a0}
+.nav-glider{background:linear-gradient(0deg,#d3bd8c0d,transparent);box-shadow:none;border-radius:0}
+.nav-glider:after{height:2px;bottom:-3px;left:10px;right:10px;background:linear-gradient(90deg,#9faf86,#e1c69c);box-shadow:0 2px 10px #e1c69c16}
+.header nav a:after{background:#c9bd91}
+.header .delivery-caption{color:#a4b19d}
+.header .location-control>svg{color:#c4b388}
+.header .header-select select{color:#f0eddf}
+.header .header-select option{color:#273a2d;background:#f8f5eb}
+.header .header-actions>.header-select:not(.location-control){border-color:#cbd2ae24;background:#ffffff05;color:#cfc3a0}
+.header .header-actions>.header-select:not(.location-control) select{color:#e0d4b4}
+.header .header-actions button,.header .header-actions a.login{background:#ffffff05;border-color:#cbd2ae24;color:#e3e5d4}
+.header .header-actions button:hover,.header .header-actions a.login:hover{background:#d8d4ad14;border-color:#c7c8a44d;box-shadow:0 4px 16px #10201818;transform:none}
+.header .cart-count{background:#bba376;color:#172b1e;border-color:#26382b;font-weight:700}
+.header a.login.is-authenticated:after{background:#c1d39c;border-color:#26382b}
+.header .header-select select:focus-visible,.header a:focus-visible,.header button:focus-visible{outline-color:#d7c69d}
+.hero>.header:after{display:none}
+.header>.brand:after{display:none}
+@media(prefers-reduced-motion:no-preference){
+  .header nav.nav-has-motion a:hover,.header nav.nav-has-motion a:focus-visible{translate:0 -1px}
+  .header>.brand:hover .brand-logo{translate:none;scale:1.015}
+  .header .header-actions a.login:hover svg,.header .header-actions .cart-button:hover svg,
+  .header .cart-button:hover .cart-count,.header .location-control:hover>svg{animation:none;translate:none;rotate:none;scale:1}
+  .header .header-actions a.login>svg,.header .header-actions .cart-button>svg{transition:translate .35s cubic-bezier(.22,1,.36,1),color .25s}
+  .header .header-actions a.login:hover>svg,.header .header-actions .cart-button:hover>svg{translate:0 -2px}
+  .header .header-actions>.header-select:not(.location-control):hover svg{rotate:12deg}
+  .nav-glider{transition:transform .55s cubic-bezier(.22,1,.36,1),width .55s cubic-bezier(.22,1,.36,1),height .4s ease,opacity .25s ease}
+}
+@media(max-width:600px){.hero>.header{background:linear-gradient(110deg,#16271efc,#233123f5)}}
+
+/* Match the shared header to the ivory and pale-yellow page palette. */
+.hero>.header{background:linear-gradient(105deg,#e4efd9f7,#f5f8eeF2);color:#334331;border-bottom-color:#b5c5a255;box-shadow:0 8px 28px #344b2514}
+.header>.brand .brand-logo{filter:brightness(0) saturate(100%) invert(20%) sepia(15%) saturate(1050%) hue-rotate(70deg) brightness(88%) contrast(90%)}
+.header nav a,.header nav a.active,.header nav a:hover,.header nav a:focus-visible,.header nav.nav-has-motion a:hover,.header nav.nav-has-motion a:focus-visible{color:#394b35}
+.nav-glider{background:linear-gradient(0deg,#a75e4810,transparent)}
+.nav-glider:after{background:linear-gradient(90deg,#c7a65a,#a75e48)}
+.header nav a:after{background:#a75e48}
+.header .delivery-caption{color:#7d816b}
+.header .location-control>svg,.preference-trigger>svg:first-child{color:#9e7843}
+.header .header-select select,.header .header-actions>.header-select:not(.location-control) select,.header .header-actions>.header-select:not(.location-control){color:#394b35}
+.header .header-actions>.header-select:not(.location-control),.header .header-actions .preference-trigger{border-color:#bacda9;background:#f5f8ee80;color:#394b35}
+.header .header-actions .preference-location .preference-trigger{background:transparent}
+.preference-value,.preference-caption{color:#394b35}
+.header .header-actions button,.header .header-actions a.login,.header .header-actions a.cart-button{background:#fffdf5;border-color:#d6c58e;color:#394b35}
+.header .header-actions button:hover,.header .header-actions a.login:hover,.header .header-actions .preference-trigger:hover{background:#dce9cf;border-color:#a6bd90;color:#293d2d}
+.header .cart-count{background:#91a876;color:#fffdf5;border-color:#e4efd9}
+.header a.login.is-authenticated:after{border-color:#e4efd9}
+.hero>.header:after{display:none}
+@media(max-width:600px){.hero>.header{background:linear-gradient(110deg,#e4efd9,#f5f8ee)}}
